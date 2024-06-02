@@ -7,4 +7,5 @@ spec:
   template:
     metadata:
       annotations:
+        argocd.argoproj.io/sync-options: Delete=false # prevent deletion of this deployment on argocd chart deletion
         kubectl.kubernetes.io/restartedAt: {{ now | date "2006-01-02T15:04:05" }}
